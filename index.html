@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakerz | Artisan Bakery</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aguafina+Script&family=Bilbo+Swash+Caps&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shalimar&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <header>
+        <span id="logo">
+            <a href="#home"><i>Bakerz</i></p>
+        </span>
+
+
+        <div id="right">
+
+            <nav id="navbar">
+                <a href="#menu" class="navItem hover">Menu</a>
+                <a href="#gallery" class="navItem hover">Gallery</a>
+                <a href="#faq" class="navItem hover">FAQ</a>
+                <a href="#location" class="navItem hover">Visit</a>
+            </nav>
+            <a href="#contact" class="navItem btn">Pre-Order</a>
+            <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbar"
+                type="button">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+
+    </header>
+
+    <hr>
+    <main>
+        <section id="home">
+            <div id="textContainer">
+
+                <div class="fraunces" id="heroHeading">Bread for <div><i>everyone.</i></div>
+                </div>
+
+                <p>
+                    Discover freshly baked cakes, pastries,
+                    and breads made with love. Suscipit ipsum cumque mollitia aperiam adipisci voluptatibus, amet natus
+                    dicta enim! Labore, dolores.
+                </p>
+
+                <button class="btn"><a href="#menu">Explore Our Menu <i
+                            class="fa-solid fa-circle-arrow-right"></i></a></button>
+            </div>
+            <div id="imageContainer">
+                <div class="bakery-stack">
+                    <img id="card-front" src="images/breadHero.avif" alt="Freshly baked croissants"
+                        class="bakery-card card-front">
+
+                    <i id="prevBtn" class="fa-solid fa-circle-chevron-left"></i>
+                    <img id="card-back" src="images/butterCross.avif" alt="Freshly baked croissants"
+                        class="bakery-card card-back">
+                    <i id="nextBtn" class="fa-solid fa-circle-chevron-right"></i>
+
+                    <img id="card-back-2" src="images/cakeHero.avif" alt="Decorated bakery cake"
+                        class="bakery-card card-back-2">
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------------- -->
+        <section id="menu" class="py-16 px-6 bg-amber-600 w-screen relative left-1/2 -translate-x-1/2">
+            <!-- <section id="menu" class="py-16 px-6 bg-amber-300"> -->
+
+            <div class="max-w-6xl mx-auto text-center">
+
+                <h2 class="text-4xl font-bold text-amber-950 mb-4">
+                    Our Menu
+                </h2>
+
+                <p class="text-gray-600 mb-8">
+                    Freshly baked happiness in every bite.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4  mb-10 text-sm md:text-lg">
+                    <button class="filter-btn active" data-category="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn" data-category="cakes">
+                        Cakes
+                    </button>
+
+                    <button class="filter-btn" data-category="pastries">
+                        Pastries
+                    </button>
+
+                    <button class="filter-btn" data-category="breads">
+                        Breads
+                    </button>
+                </div>
+
+                <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <article class="product-card" data-category="cakes">
+                        <div class="product-image">
+                            <img src="images/chocoCake.avif" alt="Chocolate cake">
+
+                            <div class="product-description">
+                                Rich chocolate cake layered with smooth chocolate
+                                ganache for chocolate lovers.
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Chocolate Cake</h3>
+                            <p class="text-amber-800 font-bold mt-2">₹450</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="cakes">
+                        <div class="product-image">
+                            <img src="images/cheeseCake.avif" alt="Creamy cheesecake">
+
+                            <div class="product-description">
+                                Creamy cheesecake with a buttery biscuit base.
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Cheesecake</h3>
+                            <p class="text-amber-800 font-bold mt-2">₹350</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="pastries">
+                        <div class="product-image">
+                            <img src="images/butterCross.avif" alt="Fresh butter croissant">
+
+                            <div class="product-description">
+                                A golden, flaky croissant baked with buttery layers.
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Butter Croissant</h3>
+                            <p class="text-amber-800 font-bold mt-2">₹120</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="pastries">
+                        <div class="product-image">
+                            <img src="images/cinnRoll.avif" alt="Cinnamon roll">
+
+                            <div class="product-description">
+                                Soft, sweet dough swirled with cinnamon and sugar.
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Cinnamon Roll</h3>
+                            <p class="text-amber-800 font-bold mt-2">₹100</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="breads">
+                        <div class="product-image">
+                            <img src="images/sourBread.avif" alt="Sourdough bread">
+
+                            <div class="product-description">
+                                Crusty artisan bread with a soft, chewy centre.
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Sourdough Bread</h3>
+                            <p class="text-amber-800 font-bold mt-2">₹180</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="breads">
+                        <div class="product-image">
+                            <img src="images/garlicBread.avif" alt="Garlic bread">
+
+                            <div class="product-description">
+                                Warm, freshly baked bread with garlic and herbs.
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Garlic Bread</h3>
+                            <p class="text-amber-800 font-bold mt-2">₹150</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------------- -->
+
+        <section id="contact" class="py-16 px-6">
+            <div class="max-w-2xl mx-auto">
+
+                <h2 class="text-4xl font-bold text-center text-amber-950 mb-4">
+                    Get in Touch
+                </h2>
+
+                <p class="text-center text-gray-600 mb-8">
+                    Have a question or a special request? We'd love to hear from you.
+                </p>
+
+                <form id="contact-form" class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 font-medium">Your Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full border border-gray-300 rounded-lg p-3" placeholder="Enter your name">
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="email" class="block mb-2 font-medium">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full border border-gray-300 rounded-lg p-3" placeholder="you@example.com">
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="message" class="block mb-2 font-medium">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full border border-gray-300 rounded-lg p-3"
+                            placeholder="How can we help?"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-amber-800 text-white py-3 rounded-lg hover:bg-amber-900 transition">
+                        Send Message
+                    </button>
+
+                    <p id="form-feedback" class="mt-4 text-center" role="status" aria-live="polite"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------------------------/ -->
+
+        <section id="gallery" class="bg-transparent py-16 px-6">
+            <div class="max-w-6xl mx-auto">
+
+                <h2 class="text-4xl font-bold text-center text-amber-950 mb-4">
+                    A Taste of Our Bakery
+                </h2>
+
+                <p class="text-center text-gray-600 mb-10">
+                    Freshly baked happiness, made with love.
+                </p>
+
+                <div class="relative max-w-3xl mx-auto">
+
+                    <img id="gallery-image" src="images/bakery1.avif" alt="Freshly baked croissant"
+                        class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg cursor-pointer">
+
+                    <button id="prev-btn" type="button" aria-label="Previous image"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 bg-white text-amber-950 w-10 h-10 rounded-full shadow-lg hover:bg-amber-100">
+                        &#10094;
+                    </button>
+
+                    <button id="next-btn" type="button" aria-label="Next image"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-amber-950 w-10 h-10 rounded-full shadow-lg hover:bg-amber-100">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                <p id="gallery-counter" class="text-center text-gray-600 mt-4">
+                    1 / 4
+                </p>
+
+                <div id="gallery-thumbnails" class="flex justify-center gap-3 mt-6 flex-wrap">
+
+                    <button type="button" class="gallery-thumb" data-index="0" aria-label="Show croissant image">
+                        <img src="images/bakery1.avif" alt="" class="w-20 h-20 object-cover rounded-lg">
+                    </button>
+
+                    <button type="button" class="gallery-thumb" data-index="1" aria-label="Show cupcakes image">
+                        <img src="images/bakery2.avif" alt="" class="w-20 h-20 object-cover rounded-lg">
+                    </button>
+
+                    <button type="button" class="gallery-thumb" data-index="2" aria-label="Show cake image">
+                        <img src="images/bakery3.avif" alt="" class="w-20 h-20 object-cover rounded-lg">
+                    </button>
+
+                    <button type="button" class="gallery-thumb" data-index="3" aria-label="Show bakery image">
+                        <img src="images/bakery4.avif" alt="" class="w-20 h-20 object-cover rounded-lg">
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--------------------------------------------------------->
+
+        <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4" role="dialog"
+            aria-modal="true" aria-label="Enlarged gallery image">
+            <button id="lightbox-close" type="button"
+                class="absolute right-6 top-6 text-4xl text-white hover:text-amber-300"
+                aria-label="Close enlarged image">
+                &times;
+            </button>
+
+
+            <img id="lightbox-image" src="" alt=""
+                class=" max-h-[85vh] min-w-[65vw] rounded-3xl object-contain shadow-2xl">
+
+        </div>
+
+        <!-- ------------------------------------------------------------------- -->
+
+        <section id="faq" class="bg-amber-50 py-16 px-6 w-screen relative left-1/2 -translate-x-1/2">
+            <div class="max-w-3xl mx-auto">
+
+                <h2 class="text-4xl font-bold text-center text-amber-950 mb-4">
+                    Frequently Asked Questions
+                </h2>
+
+                <p class="text-center text-gray-600 mb-10">
+                    Everything you need to know about our bakery.
+                </p>
+
+                <div class="space-y-4">
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button type="button"
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-amber-950  cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-answer-1">
+                            <span>Do you bake fresh products every day?</span>
+                            <span class="faq-icon text-xl" aria-hidden="true">+</span>
+                        </button>
+
+                        <div id="faq-answer-1"
+                            class="faq-answer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-5 pb-0 text-gray-600">
+                            Yes! We prepare our baked goods fresh every day using carefully selected ingredients.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden cursor-pointer">
+                        <button type="button"
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-amber-950 cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-answer-2">
+                            <span>Can I order a customized cake?</span>
+                            <span class="faq-icon text-xl" aria-hidden="true">+</span>
+                        </button>
+
+                        <div id="faq-answer-2"
+                            class="faq-answer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-5 pb-0 text-gray-600 ">
+                            Absolutely! You can contact us with your preferred flavor, design, and occasion details.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden cursor-pointer">
+                        <button type="button"
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-amber-950 cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-answer-3">
+                            <span>Do you offer home delivery?</span>
+                            <span class="faq-icon text-xl" aria-hidden="true">+</span>
+                        </button>
+
+                        <div id="faq-answer-3"
+                            class="faq-answer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-5 pb-0 text-gray-600 ">
+                            Please contact our bakery to check delivery availability in your area.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden cursor-pointer">
+                        <button type="button"
+                            class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-amber-950 cursor-pointer"
+                            aria-expanded="false" aria-controls="faq-answer-4">
+                            <span>How can I place an order?</span>
+                            <span class="faq-icon text-xl" aria-hidden="true">+</span>
+                        </button>
+
+                        <div id="faq-answer-4"
+                            class="faq-answer max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-5 pb-0 text-gray-600 ">
+                            You can contact us through the contact form on this website to discuss your order.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------------- -->
+
+        <section id="location" class="bg-transparent py-16 px-0">
+            <div class="max-w-6xl mx-auto">
+
+
+                <h2 class="text-4xl font-bold text-center text-amber-950 mb-4">
+                    Visit Our Bakery
+                </h2>
+
+                <p class="text-center text-gray-600 mb-10">
+                    We'd love to welcome you for something freshly baked.
+                </p>
+
+                <div class="bg-amber-50 p-5 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                    <div class="p-5">
+
+                        <h3 class="text-2xl font-bold text-amber-950 mb-6">
+                            Bakerz
+                        </h3>
+
+                        <div class="mb-5">
+                            <h4 class="font-semibold text-amber-900 mb-1">
+                                Address
+                            </h4>
+                            <p class="text-gray-600">
+                                Vesu, Surat-395001
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-amber-900 mb-1">
+                                Opening Hours
+                            </h4>
+                            <p class="text-gray-600">
+                                Monday – Sunday: 8:00 AM – 9:00 PM
+                            </p>
+                        </div>
+
+                        <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                            class="inline-block bg-amber-800 text-white px-6 py-3 rounded-lg hover:bg-amber-900 transition">
+                            Find Us on Google Maps
+                        </a>
+
+                    </div>
+
+                    <div class="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Surat%2C%20Gujarat%2C%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            title="Map showing Surat, Gujarat" class="w-full h-full border-0" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------------------------- -->
+
+
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2026 Bakerz. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

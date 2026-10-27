@@ -1,0 +1,401 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(250, 242, 231);
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(250, 242, 231);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 0%;
+}
+
+#right {
+    display: flex;
+    gap: 25px;
+}
+
+#logo {
+    font-size: 2em;
+    font-family: "Agbalumo";
+    font-weight: 100;
+    color: #92400e;
+    padding-bottom: 20px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navItem.hover {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.navItem.hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #92400e;
+    transition: width 0.3s ease-in-out;
+}
+
+.navItem.hover:hover::after {
+    width: 100%;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2% 5% 10% 0; */
+}
+
+#home #textContainer {
+    max-width: 50%;
+}
+
+#home #heroHeading {
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+#home #heroHeading i {
+    color: #92400e;
+}
+
+#home p {
+    margin-bottom: 25px;
+}
+
+.bakery-stack {
+    position: relative;
+    width: 320px;
+    height: 360px;
+    margin: 40px auto;
+}
+
+.bakery-card {
+    position: absolute;
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+
+}
+
+
+.card-front {
+    top: 10px;
+    left: 30px;
+    z-index: 3;
+}
+
+.card-back {
+    top: 55px;
+    left: 80px;
+    transform: rotate(10deg);
+    z-index: 2;
+
+}
+
+.card-back-2 {
+    top: 45px;
+    left: 0;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+#nextBtn {
+    position: absolute;
+    top: 133px;
+    left: 230px;
+    z-index: 5;
+    font-size: 33px;
+    color: white;
+    cursor: pointer;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 133px;
+    left: 10px;
+    z-index: 5;
+    font-size: 33px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu {
+    background-color: rgb(245, 226, 122);
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border-radius: 9999px;
+    border: 1px solid #92400e;
+    color: #92400e;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #92400e;
+    color: white;
+}
+
+.product-card {
+    background-color: rgb(250, 242, 231);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product-description {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    color: rgb(250, 242, 231);
+    background-color: #92400e;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-description {
+    opacity: 1;
+}
+
+.product-card[hidden] {
+    display: none;
+}
+
+.gallery-thumb.active {
+    border: 2px solid #92400e;
+    border-radius: 10px;
+    padding: 2.5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2.5%;
+}
+
+.btn {
+    background-color: #92400e;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: rgb(250, 242, 231);
+    border: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.fraunces {
+    font-family: "Fraunces", serif;
+
+}
+
+hr {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border: none;
+    border-top: 1px solid #fad4bdb0;
+}
+
+@media(min-width:1025px) {
+    header {
+        padding: 0% 10%;
+    }
+
+    section {
+        padding: 5% 10%;
+    }
+
+    #product-list {
+        margin: 0 2.5%;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 0% 5%;
+        gap: 0;
+    }
+
+    section {
+        padding: 5% 5%;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    header {
+        padding: 16px 5%;
+    }
+
+    section {
+        margin-top: 10%;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 180vh;
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 20px;
+        background-color: rgb(250, 242, 231);
+        z-index: 100;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    .navItem {
+        padding: 14px 10px;
+    }
+
+    .navItem.btn {
+        text-align: center;
+        /* margin-top: 8px; */
+        max-width: max-content;
+        padding: 10px 30px;
+    }
+
+    #home {
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    #textContainer {
+        padding: 5%;
+        max-width: 100% !important;
+    }
+
+}
+
+@media(max-width:426px) {
+    #home {
+        margin-top: 5vh;
+        font-size: 0.75em;
+    }
+
+    header {
+        font-size: 0.75em;
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
+
+    }
+
+    #right {
+        gap: 10px;
+    }
+
+    #menu-toggle {
+        font-size: 20px;
+    }
+
+    #navbar {
+        top: 100%;
+        height: 150vh;
+    }
+
+    .navItem.btn {
+        display: block;
+    }
+
+    .bakery-stack {
+        margin-bottom: -50px;
+    }
+
+    .bakery-card {
+        width: 60%;
+        height: 60%;
+        margin-left: 40px;
+    }
+
+    #prevBtn {
+        top: 110px;
+        left: 50px;
+    }
+
+    #nextBtn {
+        top: 110px;
+        left: 240px;
+    }
+
+    .card-back {
+        left: 50px;
+    }
+
+}
