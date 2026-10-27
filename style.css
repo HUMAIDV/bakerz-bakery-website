@@ -17,7 +17,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5% 0%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 
 #right {
@@ -30,7 +31,7 @@ header {
     font-family: "Agbalumo";
     font-weight: 100;
     color: #92400e;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 #navbar {
@@ -264,7 +265,9 @@ hr {
 
 @media(min-width:1025px) {
     header {
-        padding: 0% 10%;
+        /* padding: 0% 10%; */
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     section {
@@ -278,7 +281,8 @@ hr {
 
 @media (max-width: 1024px) {
     header {
-        padding: 0% 5%;
+        padding-left: 5%;
+        padding-right: 5%;
         gap: 0;
     }
 
@@ -353,9 +357,6 @@ hr {
 
     header {
         font-size: 0.75em;
-        padding-top: 2.5px;
-        padding-bottom: 2.5px;
-
     }
 
     #right {
@@ -369,6 +370,8 @@ hr {
     #navbar {
         top: 100%;
         height: 150vh;
+        font-size: 1rem;
+
     }
 
     .navItem.btn {
